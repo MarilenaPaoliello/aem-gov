@@ -5,7 +5,7 @@
         cq:allowedTemplates="[/conf/gov/settings/wcm/templates/(?!xf-).*]"
         cq:conf="/conf/gov"
         jcr:primaryType="cq:PageContent"
-        jcr:title="Gov Site Project"
+        jcr:title="GOV Sites Project"
         sling:configRef="/conf/gov"
         sling:redirect="{Boolean}true"
         sling:redirectStatus="{Long}302"
@@ -15,5 +15,6 @@
             <file/>
         </image>
     </jcr:content>
+    <it/>
     <us/>
 </jcr:root>

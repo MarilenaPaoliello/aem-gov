@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2022-02-28T11:25:04.552+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/gov/settings/wcm/templates/article-page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ucraina, colloquio telefonico Draghi - Zelensky"
+        sling:resourceType="gov/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="gov/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="gov/components/container"
+                layout="responsiveGrid">
+                <container
+                    jcr:created="{Date}2022-02-28T10:30:45.475+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-02-28T10:30:45.475+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="gov/components/container">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="6"/>
+                    </cq:responsive>
+                    <title
+                        jcr:created="{Date}2022-02-28T10:31:48.892+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-02-28T10:31:48.892+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="gov/components/title"/>
+                    <text
+                        jcr:created="{Date}2022-02-28T10:37:01.139+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-02-28T11:23:58.577+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="gov/components/text"
+                        text="&lt;p>26 Febbraio 2022&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                    <image
+                        jcr:created="{Date}2022-02-28T10:37:31.322+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-02-28T11:24:19.002+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="gov/components/image"
+                        fileReference="/content/dam/gov/logo_PCM_U_8.png"/>
+                    <text_1202350768
+                        jcr:created="{Date}2022-02-28T10:39:08.992+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-02-28T11:25:04.548+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="gov/components/text"
+                        text="&lt;p>Il Presidente del Consiglio Mario Draghi ha telefonato oggi al Presidente dell'Ucraina, Volodimir Zelensky, per esprimere a lui e al popolo ucraino la solidarietà e vicinanza dell’Italia di fronte all'attacco della Federazione Russa. Il Presidente Zelensky ha confermato il chiarimento totale del malinteso di comunicazioni avvenuto ieri e ha ringraziato il Presidente Draghi per il suo sostegno e per la forte vicinanza e amicizia tra i due popoli. Il Presidente Draghi ha ribadito al Presidente Zelensky che l’Italia appoggia e appoggerà in pieno la linea dell’Unione Europea sulle sanzioni alla Russia, incluse quelle nell’ambito SWIFT. Il Presidente ha detto che l'Italia fornirà all'Ucraina assistenza per difendersi. I due Presidenti hanno concordato di restare in stretto contatto nell'immediato futuro.&lt;/p>&#xd;&#xa;&lt;p>****&lt;/p>&#xd;&#xa;&lt;p>The President of the Council of Ministers, Mario Draghi, telephoned President Volodymyr Zelensky of Ukraine today, to express Italy’s solidarity with and support for him and the Ukrainian population in the face of the attack by the Russian Federation. President Zelensky confirmed that yesterday’s misunderstanding in communication had been completely cleared up and thanked Prime Minister Draghi for his support and for the very close and friendly relationship between the two nations. PM Draghi reaffirmed to President Zelensky that Italy fully supports and will continue to support the European Union’s line on sanctions against Russia, including those regarding SWIFT. Prime Minister Draghi said that Italy will provide Ukraine with assistance to defend itself. The two leaders agreed to remain in close contact in the immediate future.&lt;/p>&#xd;&#xa;&lt;p>&lt;a href=&quot;http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.governo.it%2Fit%2Farticolo%2Fucraina-telefonata-draghi-zelensky%2F19274&quot; title=&quot;Condividi su Facebook&quot;>&amp;nbsp;&lt;/a>&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"/>
+                </container>
+                <container_1409783002
+                    jcr:created="{Date}2022-02-28T10:31:01.315+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-02-28T10:31:01.315+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="gov/components/container">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="6"/>
+                    </cq:responsive>
+                </container_1409783002>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2022-02-25T14:30:31.704+01:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/gov/settings/wcm/templates/homepage"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="gov/components/page">
+        <root
+            jcr:lastModified="{Date}2022-02-25T14:30:31.702+01:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="gov/components/container"
+            layout="responsiveGrid">
+            <experiencefragment
+                jcr:created="{Date}2022-02-25T10:12:19.887+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-02-25T10:14:50.750+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="gov/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/gov/us/en/site/header/master">
+                <cq:responsive jcr:primaryType="nt:unstructured">
+                    <default
+                        jcr:primaryType="nt:unstructured"
+                        offset="0"
+                        width="12"/>
+                </cq:responsive>
+            </experiencefragment>
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="gov/components/container"
+                editable="{Boolean}true"
+                layout="responsiveGrid"/>
+            <experiencefragment_395395077
+                jcr:created="{Date}2022-02-25T10:12:53.159+01:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2022-02-25T10:15:04.935+01:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="gov/components/experiencefragment"
+                fragmentVariationPath="/content/experience-fragments/gov/us/en/site/footer/master"/>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}768"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

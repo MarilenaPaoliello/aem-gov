@@ -3,6 +3,8 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         cq:deviceGroups="[mobile/groups/responsive]"
+        cq:lastModified="{Date}2022-03-03T15:08:00.966+01:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/gov/settings/wcm/templates/page-content"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="gov/components/page">
@@ -18,10 +20,6 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="gov/components/container"
                 layout="responsiveGrid">
-                <title
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="gov/components/title"
-                    editable="{Boolean}true"/>
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="gov/components/container"
