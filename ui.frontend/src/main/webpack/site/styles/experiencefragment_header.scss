@@ -3,11 +3,13 @@
 
 header.experiencefragment {
     padding: .5em 1em;
-    border-bottom: 1px solid $color-foreground;
+    border-bottom: 1px solid $text-color;
+    background-color: $bg-color-header;
 
     @media (prefers-color-scheme: dark) {
         border-bottom-color: $color-foreground-dark;
     }
+
 
     a {
         color: $color-foreground;
@@ -29,11 +31,9 @@ header.experiencefragment {
     }
 
     //== Grid layout
-
-    .cmp-container {
-        display: grid;
-        grid-template-columns: 4fr 1fr 1fr;
-    }
+        #container-7b2e04c52a.cmp-container{
+         display:block;
+        }
 
     //== Navigation
 
