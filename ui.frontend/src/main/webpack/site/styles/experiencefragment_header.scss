@@ -128,4 +128,52 @@ header.experiencefragment {
     .cmp-search__input {
         height: 26px;
     }
+
+    .nav-menu{
+        label{
+            color: white;
+            font-size: 2.5rem;
+            margin: 50%;
+        }
+        input{
+            display:none;
+            }
+        input:checked ~ label span:last-child{
+                display:none;
+            }
+        input:not(:checked) ~ label span:first-child{
+            display:none;
+            }
+
+        ul{
+            margin: -1.2%;
+            background-color: $text-color;
+            position: absolute;
+            overflow:hidden;
+            width:0;
+            height:0;
+            padding:0;
+            margin:0;
+            transition:width 0.5s, height 0.5s;
+            list-style:none;
+        }
+        input:checked ~ ul{
+            width:40%;
+            height:100%;
+        }
+        li{
+            font-size: 1em;
+            line-height: 18px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 1em;
+            padding-right: 1em;
+            border-bottom: 1px solid #e7e6e4;
+        }
+        li:hover{
+            background-color: $light-bue;
+            color: $menu-color;
+        }
+
+    }
 }

@@ -1,12 +1,3 @@
-<style>
-    ul {
-        list-style: none;
-    }
-    .cq-page-hide{
-        display: none;
-    }
-    
-</style>
 
  <div class="cmp-togglemenu" data-cmp-is="togglemenu"
 data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
@@ -21,16 +12,20 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
             </ul>
         </li>
     </ul>-->
-    <hr>
-    <h3>Seconda lista</h3>
-    <ul data-sly-list="${mymodel.resourcePages}">
-        <li>${item.title}
-            <ul data-sly-list.child="${item.listChildren}">
-                <a href=" ${child.path @ extension = 'html'}">
-                    <li >${child.title} </li>
-                </a>
+   <nav class="nav-menu">
+        <input type="checkbox" id="menuToggle" >
+        <label for="menuToggle"><span>&times;</span><span>&#9776;</label>
+            <ul data-sly-list="${mymodel.resourcePages}">
+                <li>${item.title}
+                   <!--  <ul data-sly-list.child="${item.listChildren}">
+                        <a href=" ${child.path @ extension = 'html'}">
+                            <li >${child.title} </li>
+                        </a>
+                    </ul>-->
+        
+                </li>
             </ul>
-
-        </li>
-    </ul>
+   </nav>
+   
+    
 </div>
