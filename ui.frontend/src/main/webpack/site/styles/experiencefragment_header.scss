@@ -1,15 +1,15 @@
 
 //== XF Header style, used on page template
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;700&display=swap');
 
 header.experiencefragment {
-    padding: .5em 1em;
+    padding: .5em 0em;
     border-bottom: 1px solid $text-color;
     background-color: $bg-color-header;
 
     @media (prefers-color-scheme: dark) {
         border-bottom-color: $color-foreground-dark;
     }
-
 
     a {
         color: $color-foreground;
@@ -130,22 +130,22 @@ header.experiencefragment {
     }
 
     .nav-menu{
-        label{
+        label#first-label{
             color: white;
             font-size: 2.5rem;
             margin: 50%;
         }
-        input{
+        input#menuToggle{
             display:none;
             }
-        input:checked ~ label span:last-child{
+        input#menuToggle:checked ~ label#first-label span:last-child{
                 display:none;
             }
-        input:not(:checked) ~ label span:first-child{
+        input#menuToggle:not(:checked) ~ label#first-label span:first-child{
             display:none;
             }
 
-        ul{
+        ul#sub-nav{
             margin: -1.2%;
             background-color: $text-color;
             position: absolute;
@@ -154,26 +154,100 @@ header.experiencefragment {
             height:0;
             padding:0;
             margin:0;
-            transition:width 0.5s, height 0.5s;
-            list-style:none;
+            transition:all 0.3s ease;
+            list-style-type: none;
         }
-        input:checked ~ ul{
+        input#menuToggle:checked ~ ul{
             width:40%;
             height:100%;
         }
-        li{
+        li.first-li{
+            position:relative;
             font-size: 1em;
             line-height: 18px;
             padding-top: 20px;
             padding-bottom: 20px;
-            padding-left: 1em;
-            padding-right: 1em;
+            padding-left: 5%;
             border-bottom: 1px solid #e7e6e4;
+            &:hover{
+                background-color: $light-bue;
+                color: $menu-color;
+            }
+    
         }
-        li:hover{
-            background-color: $light-bue;
-            color: $menu-color;
-        }
+       
+    }
 
+    ul#sub-nav{
+        input{
+            display:none;
+        }
+        span {
+            float: right;
+            font-size: 1.3em;
+            color: $menu-color;
+            padding-right: 1em;
+        }
+        input:checked ~ label span:last-child{
+            display:none;
+        }
+        input:not(:checked) ~ label span:first-child{
+           display:none;
+        }
+        ul {
+            position: absolute;
+            left: 0;
+            top: 58px;
+            margin: -1.2%;
+            background-color: $text-color;
+            overflow:hidden;
+            margin-left: 1.7%;
+            width:0;
+            height:0;
+            padding:0;
+            margin:0;
+            transition:all 0.3s ease;
+            list-style-type: none;
+            a{
+                font-size: 1em;
+                line-height: 18px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 1em;
+                padding-right: 1em;
+                border-bottom: 1px solid #e7e6e4;
+                text-decoration:none;
+                color: $menu-color;
+            }
+            li{
+                border-bottom: 1px solid white;
+                padding-left: 1.1em;
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+        }
+        input:checked ~ ul{
+            width:100%;
+            height:auto;
+            background-color: #CEF1FF;
+            
+
+        }
+    }
+    .flag-container{
+        display: flex;
+        .flag-section{
+            height: 6px;
+            width: 33.3%;
+        }
+        .flag-green{
+            background-color: $green;
+        }
+        .flag-white{
+            background-color: $text-color;
+        }
+        .flag-red{
+            background-color: $red
+        }
     }
 }

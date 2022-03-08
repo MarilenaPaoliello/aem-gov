@@ -5,6 +5,7 @@
 
 #header-top{
     display: flex;
+    padding-top: 5%;
 
     }
     img{
@@ -18,14 +19,21 @@
         }
     
 }
-#header-nav .list{
-    text-align: center;
-    a{
-        color: $text-color;}
-    
-    a:hover{
-        color: $text-color;
+#header-nav{
+
+    ul{
+        list-style-type:none;
     }
+    .list{
+        text-align: center;
+            a{
+                color: $text-color;
+            }
+        
+            a:hover{
+                color: $text-color;
+            }
+        }
    
     
 }

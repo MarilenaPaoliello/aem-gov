@@ -60,6 +60,7 @@
                                                                                 sling:resourceType="cq/gui/components/coral/common/form/pagefield"
                                                                                 name="./pages"
                                                                                 rootPath="/content"/>
+                                                                         
                                                                         </pages>
                                                                     </items>
                                                                 </children>

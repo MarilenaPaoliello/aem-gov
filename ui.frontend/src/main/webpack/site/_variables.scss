@@ -1,7 +1,7 @@
 
 //== Font
 
-$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family:           'Titillium Web', sans-serif;
 $font-size:             16px;
 $font-height:           1.5;
 
@@ -15,6 +15,8 @@ $text-color: #FFFFFF;
 $bg-color-header: #0066CC;
 $light-bue: #CEF1FF;
 $menu-color:#003e54;
+$green: green;
+$red:red;
 // Dark mode
 $color-foreground-dark: invert($color-foreground);
 $color-background-dark: invert($color-background);
