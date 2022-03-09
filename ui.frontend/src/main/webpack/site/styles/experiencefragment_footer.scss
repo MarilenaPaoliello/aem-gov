@@ -2,6 +2,7 @@
 //== XF Footer style, used on page template
 
 footer.experiencefragment {
+    background-color: $dark-gray;
     padding: .5em 1em;
     border-top: 1px solid $color-foreground;
 
@@ -12,5 +13,11 @@ footer.experiencefragment {
     .cmp-separator__horizontal-rule {
         margin: 0;
         border: 0;
+    }
+    h1, h4, p, a{
+        color: $text-color;
+    }
+    a:hover{
+        color: $text-color;
     }
 }

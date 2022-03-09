@@ -130,6 +130,23 @@ header.experiencefragment {
     }
 
     .nav-menu{
+        .link-page {
+            padding-top: 1em;
+            border-bottom: 1px solid grey;
+        }
+        .child-li>a{
+            border-bottom: 1px solid white;
+        }
+        .link-page, .child-li>a{
+            display: block;
+            padding-left: 1.1em;
+            padding-bottom: 1em;
+            &:hover{
+                background-color: $light-bue;
+                text-decoration: none;
+                color: $menu-color;
+            }
+        }
         label#first-label{
             color: white;
             font-size: 2.5rem;
@@ -149,8 +166,8 @@ header.experiencefragment {
             margin: -1.2%;
             background-color: $text-color;
             position: absolute;
-            overflow:hidden;
-            width:0;
+            overflow: hidden;
+            width: 0;
             height:0;
             padding:0;
             margin:0;
@@ -159,15 +176,14 @@ header.experiencefragment {
         }
         input#menuToggle:checked ~ ul{
             width:40%;
-            height:100%;
+            height: auto;
+            overflow: visible;
         }
         li.first-li{
             position:relative;
             font-size: 1em;
             line-height: 18px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 5%;
+            padding-left: 0px;
             border-bottom: 1px solid #e7e6e4;
             &:hover{
                 background-color: $light-bue;
@@ -175,15 +191,20 @@ header.experiencefragment {
             }
     
         }
+
        
     }
-
+   
     ul#sub-nav{
         input{
             display:none;
         }
+        #inner-label {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
         span {
-            float: right;
             font-size: 1.3em;
             color: $menu-color;
             padding-right: 1em;
@@ -195,9 +216,8 @@ header.experiencefragment {
            display:none;
         }
         ul {
-            position: absolute;
+            position: relative;
             left: 0;
-            top: 58px;
             margin: -1.2%;
             background-color: $text-color;
             overflow:hidden;
@@ -211,19 +231,14 @@ header.experiencefragment {
             a{
                 font-size: 1em;
                 line-height: 18px;
-                padding-top: 20px;
-                padding-bottom: 20px;
+            
                 padding-left: 1em;
                 padding-right: 1em;
-                border-bottom: 1px solid #e7e6e4;
                 text-decoration:none;
                 color: $menu-color;
             }
             li{
-                border-bottom: 1px solid white;
-                padding-left: 1.1em;
                 padding-top: 1em;
-                padding-bottom: 1em;
             }
         }
         input:checked ~ ul{

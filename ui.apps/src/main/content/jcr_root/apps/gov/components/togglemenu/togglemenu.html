@@ -16,21 +16,21 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
         <input type="checkbox" id="menuToggle" >
         <label id="first-label" for="menuToggle"><span>&times;</span><span>&#9776;</label>
             <ul data-sly-list="${mymodel.resourcePages}" id="sub-nav">
-                <sly data-sly-test="${item.listChildren.hasNext}">
-                    <li class="first-li">${item.title}
-                        
+                <div data-sly-test="${item.listChildren.hasNext}" class="box">
+                    <li class="first-li label"><a class="link-page">${item.title}</a>
                         <input type="checkbox" id="subMenuToggle-${itemList.index}">
                         <label id="inner-label" for="subMenuToggle-${itemList.index}"><span class="arrow-up">&#708;</span><span id="arrow-dwn">&#709;</span></label>
                             
-                        <ul data-sly-list.child="${item.listChildren}">
-                            <a href=" ${child.path @ extension = 'html'}">
-                                <li class="child-li">${child.title} </li>
-                            </a>
+                        <ul data-sly-list.child="${item.listChildren}" class="content">
+                            <li class="child-li"><a href="${child.path @ extension = '.html'}">${child.title}</a></li></a>
+                            
                         </ul>
                     </li>
-                </sly>
+                </div>
                 <sly data-sly-test="${!item.listChildren.hasNext}">
-                    <li class="first-li">${item.title}</li>
+                    
+                    <li><a href="${item.path @ extension = '.html'}" class="link-page">${item.title}</a></li>
+                    
                 </sly>
                
     
@@ -39,3 +39,4 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
    
     
 </div>
+
