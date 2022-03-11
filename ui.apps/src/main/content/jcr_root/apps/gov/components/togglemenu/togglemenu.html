@@ -2,7 +2,7 @@
  <div class="cmp-togglemenu" data-cmp-is="togglemenu"
 data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
    
-<!--    <p class="cmp-togglemenu">I links inseriti sono:${mymodel.pages @join=', '}</p>
+<!--/* <p class="cmp-togglemenu">I links inseriti sono:${mymodel.pages @join=', '}</p>
     
     <ul data-sly-list="${mymodel.pages}">
         <li data-sly-use.root="${item}">1 padre: ${root.name} --test: ${root.properties[jcr:createBy]}
@@ -11,9 +11,9 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
             
             </ul>
         </li>
-    </ul>-->
+    </ul>*/-->
    <nav class="nav-menu" id="first-nav">
-        <input type="checkbox" id="menuToggle" >
+        <input type="checkbox" id="menuToggle">
         <label id="first-label" for="menuToggle"><span>&times;</span><span>&#9776;</label>
             <ul data-sly-list="${mymodel.resourcePages}" id="sub-nav">
                 <div data-sly-test="${item.listChildren.hasNext}" class="box">
@@ -23,7 +23,7 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
                             
                         <ul data-sly-list.child="${item.listChildren}" class="content">
                             <li class="child-li"><a href="${child.path @ extension = '.html'}">${child.title}</a></li></a>
-                            
+                   
                         </ul>
                     </li>
                 </div>

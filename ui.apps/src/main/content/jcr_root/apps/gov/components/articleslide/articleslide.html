@@ -1,0 +1,27 @@
+
+ <div class="cmp-articleslide" data-cmp-is="articleslide"
+data-sly-use.mymodel="com.adobe.aem.gov.core.models.ArticleslideModel" data-sly-unwrap>
+   
+    <!--<p class="cmp-articleslide">Gli articoli inseriti sono:${mymodel.pages @join=', '}</p>-->
+   
+    <ul data-sly-list="${mymodel.getResourcePages}">
+        
+        <li>${item.properties}
+            
+        </li>
+        
+    </ul>
+
+  
+        <ul data-sly-list.key="${mymodel.getMetadata}">
+             <li> KEY: ${key}, VALUE: ${mymodel.getMetadata[key]}</li>
+        </ul>
+    
+
+    </ul>
+    
+ 
+   
+    
+</div>
+
