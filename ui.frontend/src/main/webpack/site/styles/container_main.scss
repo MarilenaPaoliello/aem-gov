@@ -4,3 +4,27 @@
 main.container {
     padding: .5em 1em;
 }
+
+#banner-blu{
+    padding: 1% 4%;
+    line-height: 28.512px;
+    background-color: $bg-color-header;
+    .title{
+        color: $text-color;
+    }
+}
+#blu-banner-text{
+    
+    #left-panel{
+        h3{
+            border-bottom: 1px solid  #003e54;
+            color: #003e54;
+        }
+    }
+    #right-panel{
+        h3, a{
+            padding-left: 4%;
+            color:#003e54;
+        }
+    }
+}
