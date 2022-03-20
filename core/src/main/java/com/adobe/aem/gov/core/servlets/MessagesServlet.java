@@ -32,7 +32,8 @@ import java.sql.Connection;
  * {@link SlingSafeMethodsServlet} shall be used for HTTP methods that are
  * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
-@Component(service = { Servlet.class }, property={"sling.servlet.methods=get", "sling.servlet.paths=/bin/messages"})
+@Component(service = { Servlet.class }, 
+          property={"sling.servlet.methods=get", "sling.servlet.paths=/bin/messages"})
 
 @ServiceDescription("Get Meggases Servlet")
 
@@ -68,7 +69,7 @@ public class MessagesServlet extends SlingAllMethodsServlet {
     @Override
     protected void doPost(final SlingHttpServletRequest req,
             final SlingHttpServletResponse resp) throws ServletException, IOException {
-            resp.getWriter().write("### inside my Inserting data into yuridb");
+            resp.getWriter().write("### Messagio inserito con successo");
         Connection con = getConnection();
         String name = req.getParameter("name");
         String message = req.getParameter("message");
@@ -82,7 +83,7 @@ public class MessagesServlet extends SlingAllMethodsServlet {
             preparedStmt.setString (2, message);
             preparedStmt.execute();
 
-            resp.getWriter().write("###  INSERT DATA : " + name + " ### " + message + "\n");
+            resp.getWriter().write("###  Hai inserito per l'utente : " + name + " ### il messaggio: " + message + "\n");
             con.close();
           } catch(SQLException e) {
             resp.getWriter().write(e.getMessage());
