@@ -1,0 +1,23 @@
+
+<h3>Testo prova submit new msg </h3>
+<button>Load list </button>
+<ul id="myResult"></ul>
+
+    
+
+
+<script>
+   $( document ).ready(function() {
+    $("button").click(function(){
+        console.log( "ready!" );
+        $.get( "/bin/messages", function( jsonObject ) {
+            $.each(jsonObject, function(index,jsonItem){    
+                $("#myResult").append('<li>' + '<p>name: '+ jsonItem.name + '</p>' + '<p>message: '+ jsonItem.message + '</p>' + '<p>data: ' + jsonItem.date +'</p>' + '</li>')   
+            });       
+        //$( ".myResult" ).html( JSON.stringify(json) );
+        //alert( "Load was performed." );
+        });
+    });
+});
+    
+</script>

@@ -2,6 +2,9 @@ package com.adobe.aem.gov.core.servlets;
 
 
 import com.day.cq.commons.jcr.JcrConstants;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
@@ -22,9 +25,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Connection;
+import java.sql.Date;
 
 /**
  * Servlet that writes some sample content into the response. It is mounted for
@@ -33,7 +42,7 @@ import java.sql.Connection;
  * idempotent. For write operations use the {@link SlingAllMethodsServlet}.
  */
 @Component(service = { Servlet.class }, 
-          property={"sling.servlet.methods=get", "sling.servlet.paths=/bin/messages"})
+          property={"sling.servlet.methods=*", "sling.servlet.paths=/bin/messages"})
 
 @ServiceDescription("Get Meggases Servlet")
 
@@ -50,20 +59,28 @@ public class MessagesServlet extends SlingAllMethodsServlet {
             final SlingHttpServletResponse resp) throws ServletException, IOException {
         log.debug("### inside my Messages Servlet");
         Connection con = getConnection();
+        List<HashMap> messages = new ArrayList<>();
+       
         try {
-            Statement st = con.createStatement();
-            String query = "SELECT * FROM yuridb.users";
+            Statement st = con.createStatement(); 
+            String query = "SELECT * FROM users ORDER BY date DESC LIMIT 10";
             log.debug("###  Got Result Set" + query);
             ResultSet rs = st.executeQuery(query);
-            while (rs.next()) {
-                resp.getWriter().write("Name: " + rs.getString("name") + "\n");
-                resp.getWriter().write("Message: " + rs.getString("message") + "\n");
+            while (rs.next()) { 
+                HashMap<String,String> singleMessage = new HashMap<>();
+                singleMessage.put("name",rs.getString("name"));
+                singleMessage.put("message",rs.getString("message"));
+                singleMessage.put("date",rs.getDate("date").toString());
+                messages.add(singleMessage);
             }
+            
         } catch(SQLException e) {
         // TODO Auto-generated catch block
         log.debug(e.getMessage());
         }
-       
+        Gson gson = new Gson();
+        resp.setContentType("application/json");
+        resp.getWriter().write(gson.toJson(messages));
     }
 
     @Override
@@ -75,14 +92,13 @@ public class MessagesServlet extends SlingAllMethodsServlet {
         String message = req.getParameter("message");
         try {
             con.setAutoCommit(true);
-
             String query = "INSERT INTO yuridb.users (name, message) VALUES (?, ?)";
 
             PreparedStatement preparedStmt = con.prepareStatement(query);
-            preparedStmt.setString (1, name);
-            preparedStmt.setString (2, message);
+            preparedStmt.setString (1, name.replace("\n", "").replace("\r", "").trim());
+            preparedStmt.setString (2, message.replace("\n", "").replace("\r", "").trim()); 
             preparedStmt.execute();
-
+            
             resp.getWriter().write("###  Hai inserito per l'utente : " + name + " ### il messaggio: " + message + "\n");
             con.close();
           } catch(SQLException e) {
@@ -91,7 +107,8 @@ public class MessagesServlet extends SlingAllMethodsServlet {
             // TODO Auto-generated catch block
             log.debug(e.getMessage());
           }
-        resp.setContentType("text/plain");
+        resp.setContentType("application/json");
+        resp.setCharacterEncoding("UTF-8");
         resp.getWriter().write("done!");
     }
 
