@@ -14,7 +14,7 @@ data-sly-use.mymodel="com.adobe.aem.gov.core.models.TogglemenuModel">
     </ul>*/-->
    <nav class="nav-menu" id="first-nav">
         <input type="checkbox" id="menuToggle">
-        <label id="first-label" for="menuToggle"><span>&times;</span><span>&#9776;</label>
+        <label id="first-label" for="menuToggle"><span>&times;</span><span>&#9776;</span></label>
             <ul data-sly-list="${mymodel.resourcePages}" id="sub-nav">
                 <div data-sly-test="${item.listChildren.hasNext}" class="box">
                     <li class="first-li label"><a class="link-page">${item.title}</a>

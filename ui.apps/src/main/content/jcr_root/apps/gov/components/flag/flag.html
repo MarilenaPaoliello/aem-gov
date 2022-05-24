@@ -1,5 +1,19 @@
 <div class="flag-container">
-    <div class="flag-section flag-green"></div>
-    <div class="flag-section flag-white"></div>
+    <div id ="primo" class="flag-section flag-green"></div>
+    <div  class="flag-section flag-white"></div>
     <div class="flag-section flag-red"></div>
 </div>
+
+<script>
+    let elM = document.querySelector("#primo");
+    function myF(){
+
+        elM.style.backgroundColor==="blue"? elM.style.backgroundColor="green" : elM.style.backgroundColor = "blue" ;
+    }
+    (function newF(){
+        document.getElementById("primo").addEventListener("click", function (){
+            myF();         
+        });
+               
+    })();
+</script>
