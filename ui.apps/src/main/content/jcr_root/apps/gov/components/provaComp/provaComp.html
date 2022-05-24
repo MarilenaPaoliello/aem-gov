@@ -1,0 +1,27 @@
+<p>prova componente con js</p>
+<button id="buttonM">Premi qui</button>
+<!-- <div data-sly-use.title="title.js">${title.text}
+    
+    <ul data-sly-list.child="${title}">
+        <li  data-sly-test="${title.nestedObj}">${child}</li>
+    </ul>
+    <ul data-sly-list.obj="${title.nestedObj}">
+        <li>${title.nestedObj[obj]}</li>
+    </ul>
+
+    <p>numero ${title.number}</p>
+    <p>valore ${title.arr.key2}</p> -->
+</div>
+<script>
+    $( document ).ready( () => $("#buttonM").click( evt => {
+        alert("sto caricando il js");
+        console.log(evt);
+    }))
+    //js code sample
+    document.addEventListener("DOMContentLoaded",
+        () => document.querySelector("#buttonM").addEventListener("mouseover",
+        evt => {
+        console.log(evt);
+    }))
+
+</script>
