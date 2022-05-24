@@ -1,10 +1,16 @@
 'use strict';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path                    = require('path');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const webpack                 = require('webpack');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const TSConfigPathsPlugin     = require('tsconfig-paths-webpack-plugin');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const CopyWebpackPlugin       = require('copy-webpack-plugin');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { CleanWebpackPlugin }  = require('clean-webpack-plugin');
 
 const SOURCE_ROOT = __dirname + '/src/main/webpack';
@@ -33,9 +39,9 @@ module.exports = {
                 use: [
                     {
                         options: {
-                            eslintPath: require.resolve('eslint'),
+                            eslintPath: ('eslint'),
                         },
-                        loader: require.resolve('eslint-loader'),
+                        loader: ('eslint-loader'),
                     },
                     {
                         loader: 'ts-loader'
