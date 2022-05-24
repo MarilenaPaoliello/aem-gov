@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Submit on DB Copy"
+          extraClientlibs="[governo.validator]"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    jcr:title="configuration"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <multi jcr:primaryType="nt:unstructured"
+                           sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                           fieldLabel="Add a record"
+                           submitButton="true" autoRun="false"
+                           composite="{Boolean}true">
+                        <field jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/container"
+                               name="./myRecords">
+                            <items jcr:primaryType="nt:unstructured">
+                                <name jcr:primaryType="nt:unstructured"
+                                      sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                      fieldDescription="Insert a name"
+                                      fieldLabel="Insert a name"
+                                      name="./fullName"
+                                      required="{Boolean}true">
+                                </name>
+                                <message jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                         name="./message"
+                                         fieldLabel="Insert a message here..."
+                                         fieldDescription="Set a message to save in a MySQL DB"
+                                         useFixedInlineToolbar="{Boolean}true">
+                                </message>
+                            </items>
+                        </field>
+                    </multi>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
